@@ -134,7 +134,7 @@ def Bot(collage, use_captcha):
         fullmail = 0
         pass
 
-    driver = webdriver.Firefox(executable_path=geckopath)
+    driver = webdriver.Firefox()
 
     driver.get(
         "https://www.openccc.net/uPortal/p/AccountCreation.ctf1/max/render.uP?pP_execution=e1s2")
@@ -469,7 +469,7 @@ def onlyCollege(name, pw, email, first, last, number, ssn, street, city, zipcode
 
 def orange(name, pw, email, first, last, number, ssn, street, city, zipcode):
 
-    driver = webdriver.Firefox(executable_path=geckopath)
+    driver = webdriver.Firefox()
     driver.get(
         "https://www.opencccapply.net/uPortal/f/u63l1s1000/normal/render.uP")
     time.sleep(1)
@@ -674,7 +674,7 @@ def orange(name, pw, email, first, last, number, ssn, street, city, zipcode):
 
 def gavilan(name, pw, email, first, last, number, ssn, street, city, zipcode):
 
-    driver = webdriver.Firefox(executable_path=geckopath)
+    driver = webdriver.Firefox()
     driver.get(
         "https://www.opencccapply.net/uPortal/f/u63l1s1000/normal/render.uP")
     time.sleep(1)
@@ -718,7 +718,7 @@ def gavilan(name, pw, email, first, last, number, ssn, street, city, zipcode):
     except:
         print("Unable to open enrollment page, restarting bot.")
         pass
-    driver.find_elements_by_tag_name("option")[1].click()
+    driver.find_elements_by_tag_name("option")[3].click()
     time.sleep(0.5)
     collage = Select(driver.find_element_by_id('inputEduGoal'))
     collage.select_by_value('F')
@@ -884,7 +884,7 @@ def gavilan(name, pw, email, first, last, number, ssn, street, city, zipcode):
 
 def barbara(name, pw, email, first, last, number, ssn, street, city, zipcode):
 
-    driver = webdriver.Firefox(executable_path=geckopath)
+    driver = webdriver.Firefox()
     driver.get(
         "https://www.opencccapply.net/uPortal/f/u63l1s1000/normal/render.uP")
     time.sleep(1)
@@ -1096,7 +1096,7 @@ def barbara(name, pw, email, first, last, number, ssn, street, city, zipcode):
 
 def Canada(name, pw, email, first, last, number, ssn, street, city, zipcode):
 
-    driver = webdriver.Firefox(executable_path=geckopath)
+    driver = webdriver.Firefox()
     driver.get(
         "https://www.opencccapply.net/uPortal/f/u63l1s1000/normal/render.uP")
     time.sleep(1)
@@ -1282,7 +1282,7 @@ def Canada(name, pw, email, first, last, number, ssn, street, city, zipcode):
 
 def Solano(name, pw, email, first, last, number, ssn, street, city, zipcode):
 
-    driver = webdriver.Firefox(executable_path=geckopath)
+    driver = webdriver.Firefox()
     driver.get(
         "https://www.opencccapply.net/uPortal/f/u63l1s1000/normal/render.uP")
     time.sleep(1)
@@ -1476,7 +1476,7 @@ def Solano(name, pw, email, first, last, number, ssn, street, city, zipcode):
 
 def ccsf(name, pw, email, first, last, number, ssn, street, city, zipcode):
 
-    driver = webdriver.Firefox(executable_path=geckopath)
+    driver = webdriver.Firefox()
     driver.get(
         "https://www.opencccapply.net/uPortal/f/u63l1s1000/normal/render.uP")
     time.sleep(1)
@@ -1677,7 +1677,7 @@ def ccsf(name, pw, email, first, last, number, ssn, street, city, zipcode):
 
 def San_Bernardino(name, pw, email, first, last, number, ssn, street, city, zipcode):
 
-    driver = webdriver.Firefox(executable_path=geckopath)
+    driver = webdriver.Firefox()
     driver.get(
         "https://www.opencccapply.net/uPortal/f/u63l1s1000/normal/render.uP")
     time.sleep(1)
@@ -1829,7 +1829,7 @@ def San_Bernardino(name, pw, email, first, last, number, ssn, street, city, zipc
 
 def Crafton(name, pw, email, first, last, number, ssn, street, city, zipcode):
 
-    driver = webdriver.Firefox(executable_path=geckopath)
+    driver = webdriver.Firefox()
     driver.get(
         "https://www.opencccapply.net/uPortal/f/u63l1s1000/normal/render.uP")
     time.sleep(1)
@@ -1982,7 +1982,7 @@ def Crafton(name, pw, email, first, last, number, ssn, street, city, zipcode):
 
 def Santa_Monica(name, pw, email, first, last, number, ssn, street, city, zipcode):
 
-    driver = webdriver.Firefox(executable_path=geckopath)
+    driver = webdriver.Firefox()
     driver.get(
         "https://www.opencccapply.net/uPortal/f/u63l1s1000/normal/render.uP")
     time.sleep(1)
@@ -2306,7 +2306,8 @@ def Coastline(name, pw, email, first, last, number, ssn, street, city, zipcode):
 if platform.system() == "Windows":  # checking OS
     geckopath = "./geckodriver.exe"
 else:
-    geckopath = "./geckodriver"
+    # geckopath = "./geckodriver"
+    geckopath = "/Users/mic/dev/github/Edu-Account-creator/geckodriver"
 
 
 print("""""
